@@ -37,14 +37,12 @@ namespace AspNetCoreCultureRouteParameter
 
     private string GetDefaultCultureCode()
     {
-      return "en";
+      return this.Options.DefaultRequestCulture.Culture.TwoLetterISOLanguageName;
     }
 
     private bool CheckCultureCode(string cultureCode)
     {
-      string[] supportedCultureCodes = { "en", "ru", "uk" };
-
-      return supportedCultureCodes.Contains(cultureCode);
+      return this.Options.SupportedCultures.Select(c => c.TwoLetterISOLanguageName).Contains(cultureCode);
     }
   }
 }

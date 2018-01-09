@@ -34,7 +34,7 @@ namespace AspNetCoreCultureRouteParameter
       requestLocalizationOptions.SupportedCultures = requestLocalizationOptions.SupportedUICultures =
         new CultureInfo[] { new CultureInfo("en"), new CultureInfo("ru"), new CultureInfo("uk") }.ToList();
 
-      requestLocalizationOptions.RequestCultureProviders.Insert(0, new RouteValueRequestCultureProvider());
+      requestLocalizationOptions.RequestCultureProviders.Insert(0, new RouteValueRequestCultureProvider() { Options = requestLocalizationOptions });
       applicationBuilder.UseRequestLocalization(requestLocalizationOptions);
       applicationBuilder.UseMvc(configureRoutes =>
         {
