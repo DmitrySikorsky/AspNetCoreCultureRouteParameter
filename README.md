@@ -1,7 +1,7 @@
 # ASP.NET Core Culture Route Parameter
 This is a demo web application for the
-“[ASP.NET Core Culture Route Parameter](https://medium.com/@dmitry.a.sikorsky/asp-net-core-culture-route-parameter-4e1310cabacc)”
-post on the [Dmitry Sikorsky’s blog](https://medium.com/@dmitry.a.sikorsky).
+“[ASP.NET Core Culture Route Parameter](https://medium.com/@dmitrysikorsky/asp-net-core-culture-route-parameter-4e1310cabacc)”
+post on the [Dmitry Sikorsky’s blog](https://medium.com/@dmitrysikorsky).
 It shows how to specify culture as the URL segment using the route parameter by overriding the
 `DetermineProviderCultureResult` method of the `RequestCultureProvider` class.
 
